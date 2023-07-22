@@ -4,7 +4,7 @@
   <groupId>br.com.estudos</groupId>
   <artifactId>ecommerce_console</artifactId>
   <packaging>jar</packaging>
-  <version>1.0-SNAPSHOT</version>
+  <version>v0.0.1</version>
   <name>ecommerce_console</name>
   <url>http://maven.apache.org</url>
   <dependencies>
