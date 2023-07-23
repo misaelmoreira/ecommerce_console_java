@@ -6,6 +6,8 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.estudos.models.Aluno;
+
 /**
  * Hello world!
  *
@@ -65,6 +67,14 @@ public class App
         // cars.add("Volvo");
         // cars.add("Bmw");
 
-        
+        var alunoDaniel = new Aluno();
+        alunoDaniel.setNome("Roberto");
+        alunoDaniel.getNotas().add(7.8);
+        alunoDaniel.getNotas().add(9.9);
+
+
+        System.out.println(alunoDaniel.media());
+        System.out.println(alunoDaniel.situacao());
+
     }
 }
