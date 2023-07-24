@@ -3,8 +3,32 @@ package br.com.estudos.models;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Aluno extends Pessoa {
-    private List<Double> notas;      
+import br.com.estudos.abstracao.PessoaImpl;
+import br.com.estudos.enums.Tipo;
+import br.com.estudos.interfaces.IPessoa;
+import br.com.estudos.interfaces.ITipo;
+
+public class Aluno extends PessoaImpl{
+    private List<Double> notas; 
+    private int id;
+    private String nome;
+        
+    public int getId() {
+        return id;
+    }
+    
+
+    public void setId(int id) {
+        this.id = id;
+    }    
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    } 
 
     public List<Double> getNotas(){
         if(this.notas == null){
@@ -41,9 +65,21 @@ public class Aluno extends Pessoa {
 
         return notasSeparadasPorVirgula.substring(0, notasSeparadasPorVirgula.length() - 1);
     }
-
-    // polimorfismo
-    public String nomeCompleto(){
-        return this.nome + " - " + this.sobrenome;
+    
+    @Override
+    public List<IPessoa> Todos() {
+        return null;
     }
+
+
+    @Override
+    public void SalvarSemStrategy(Tipo tipo) {
+       return;
+    }
+
+
+    @Override
+    public void Salvar(ITipo tipo) {
+        return;
+    }       
 }
